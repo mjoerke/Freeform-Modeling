@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'VAG Rounded Std Thin';
+  src: url('../fonts/VAGRoundedStd-Thin.woff');
+}
+@font-face {
+  font-family: 'VAG Rounded Std Light';
+  src: url('../fonts/VAGRoundedStd-Light.woff');
+}
+@font-face {
+  font-family: 'VAG Rounded Std Bold';
+  src: url('../fonts/VAGRoundedStd-Bold.woff');
+}
+@font-face {
+  font-family: 'VAG Rounded Std Black';
+  src: url('../fonts/VAGRoundedStd-Black.woff');
+}
+
+html, body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none
+}
+
+.navbar {
+	background-color: #c49a6d;
+	height: 100vh;
+	max-width: 120px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'VAG Rounded Std Bold', sans-serif;
+	font-size: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 2s cubic-bezier(.21,0,.15,.98) 0s;
+}
+
+.navbar:hover {
+	max-width: 1200px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.row {
+	min-width: 100%;
+	margin: 20px 0;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+	color: white;
+	opacity: 0.5;
+	transition: opacity 1s;
+}
+
+.row:hover {
+	opacity: 0.75;
+	text-shadow: 0px 0px 2px rgba(255,255,255,0.5);
+}
+
+.row.active {
+	opacity: 1;
+}
+
+.chapterNum {
+	min-width: 120px;
+	text-align: center;
+}
+
+.chapterTitle {
+	font-family: VAG Rounded Std Light;
+	margin-right: 30px;
+	min-width: 350px;
+}
+
+.content {
+	height: 100vh;
+	background-color: rgba(240, 240, 240, 1);
+	width: auto;
+	z-index: 1
+}
