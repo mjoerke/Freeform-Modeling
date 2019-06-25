@@ -1,18 +1,16 @@
 @font-face {
-  font-family: 'VAG Rounded Std Thin';
-  src: url('../fonts/VAGRoundedStd-Thin.woff');
+  font-family: "GT Sectra Display Bold";
+  src: url("/fonts/GT-Sectra-Display-Bold.woff") format("woff");
 }
+
 @font-face {
-  font-family: 'VAG Rounded Std Light';
-  src: url('../fonts/VAGRoundedStd-Light.woff');
+  font-family: "GT Sectra Display Regular";
+  src: url("/fonts/GT-Sectra-Display-Regular.woff") format("woff");
 }
+
 @font-face {
-  font-family: 'VAG Rounded Std Bold';
-  src: url('../fonts/VAGRoundedStd-Bold.woff');
-}
-@font-face {
-  font-family: 'VAG Rounded Std Black';
-  src: url('../fonts/VAGRoundedStd-Black.woff');
+  font-family: "GT Sectra Fine Book";
+  src: url("/fonts/GT-Sectra-Fine-Book.woff") format("woff");
 }
 
 html, body {
@@ -21,65 +19,154 @@ html, body {
 	padding: 0;
 }
 
-a {
-	text-decoration: none
-}
-
-.navbar {
-	background-color: #c49a6d;
-	height: 100vh;
-	max-width: 120px;
-	float: left;
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-family: 'VAG Rounded Std Bold', sans-serif;
-	font-size: 2em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	transition: all 2s cubic-bezier(.21,0,.15,.98) 0s;
-}
-
-.navbar:hover {
-	max-width: 1200px;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-.row {
-	min-width: 100%;
-	margin: 20px 0;
-	display: flex;
-	justify-content: flex-start;
+.noscrol {
 	overflow: hidden;
-	color: white;
-	opacity: 0.5;
-	transition: opacity 1s;
 }
 
-.row:hover {
-	opacity: 0.75;
-	text-shadow: 0px 0px 2px rgba(255,255,255,0.5);
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-.row.active {
-	opacity: 1;
-}
-
-.chapterNum {
-	min-width: 120px;
-	text-align: center;
-}
-
-.chapterTitle {
-	font-family: VAG Rounded Std Light;
-	margin-right: 30px;
-	min-width: 350px;
+body {
+	background-image: url("../img/background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .content {
 	height: 100vh;
-	background-color: rgba(240, 240, 240, 1);
+	background-color: transparent;
 	width: auto;
-	z-index: 1
+	float: right;
+}
+
+.section {
+	z-index: 0;
+	padding-left: 100px;
+	font-size: 3em;
+	background-color: white;
+}
+
+nav {
+	background-color: #f5e6d3;
+	opacity: 0.95;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	z-index: 5;
+	transition: transform 2s ease;
+}
+
+nav.collapsed {
+	transform: translateX(-100vw);
+}
+
+.col {
+	writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    height: 100%;
+    text-align: center;
+    width: 90px;
+}
+
+sup {
+	font-family: 'GT Sectra Fine Book', serif;
+	font-size: 0.5em;
+	margin: 20px 0;
+}
+
+.chapterTitle {
+	font-family: 'GT Sectra Display Regular', serif;
+	font-size: 4em;
+	color: #1f1a41;
+}
+
+.chapterTitle:hover {
+	color: #be9986;
+}
+
+svg {
+	fill: white;
+	width: 30px;
+	height: 30px;
+	transform: rotate(180deg);
+	transform-origin: center center;
+	transition: transform 1s ease, fill 0.2s ease;
+}
+
+svg.flip {
+	transform-origin: center center;
+	transform: rotate(0deg);
+}
+
+#controlBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100vh;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#controlBar > img {
+	width: 60px;
+	height: 60px;
+}
+
+#coverPage {
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+}
+
+#coverText {
+	color: white;
+	font-size: 0.65em;
+    font-family: 'Palatino';
+    font-weight: 200;
+    max-width: 47%;
+    line-height: 1.25em;
+
+}
+
+#coverText > a {
+	text-decoration: none;
+	font-family: 'Palatino';
+	color: white;
+	font-style: italic;
+}
+
+#coverText > a:hover {
+	color: #be9986;
+}
+
+.pageContainer {
+	padding: 10px;
+	padding-left: 30px;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+  	grid-gap: 10px;
+}
+
+.pageHeader {
+	padding-top: 100px;
+	font-family: 'GT Sectra Display Regular', serif;
+	font-size: 1em;
+    color: #1f1a41;
+    height: 80px;
+	grid-column-start: 1;
+  	grid-column-end: 4;
 }

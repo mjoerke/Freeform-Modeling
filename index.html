@@ -4,48 +4,161 @@
 	<title>Freeform Modeling Workshop</title>
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	<script type="text/javascript" src="js/fullpage.js"></script>
+	<script
+  		src="https://code.jquery.com/jquery-3.4.1.min.js"
+  		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  		crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="js/fullpage.js"></script>
 </head>
 <body>
-	<div class='navbar' id='menu'>
-		<a href='#spaceTimeVolkmar'>
-			<div class='row' data-menuanchor='spaceTimeVolkmar'>
-				<div class='chapterNum'>01</div>
-				<div class='chapterTitle'>Space, Time, & Volkmar</div>
-			</div>
-		</a>
-		<a href='#freeform'>
-			<div class='row' data-menuanchor='freeform'>
-				<div class='chapterNum'>02</div>
-				<div class='chapterTitle'>Freeform Modeling</div>
-			</div>
-		</a>
-		<a href='#clay'>
-			<div class='row' data-menuanchor='clay'>
-				<div class='chapterNum'>03</div>
-				<div class='chapterTitle'>Clay</div>
-			</div>
-		</a>
-		<a href='#plaster'>
-			<div class='row' data-menuanchor='plaster'>
-				<div class='chapterNum'>04</div>
-				<div class='chapterTitle'>Plaster</div>
-			</div>
-		</a>
-		<a href='#meditation'>
-			<div class='row' data-menuanchor='meditation'>
-				<div class='chapterNum'>05</div>
-				<div class='chapterTitle'>Meditation</div>
-			</div>
-		</a>
+	<!-- <div id='coverText'> Freeform Modeling Workshop</div> -->
+	<div id='controlBar'>
+		<svg id='navButton' class='flip' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 22.7 22.7" style="enable-background:new 0 0 22.7 22.7;" xml:space="preserve">
+		<g>
+			<polygon class="st0" points="6.5,22.6 4.9,21.1 14.7,11.3 4.9,1.6 6.5,0.1 17.7,11.3 	"/>
+		</g>
+		</svg>
 	</div>
+	<nav id='navbar' class='collapsed'>
+		<a href='#preface' class='col' data-menuanchor='preface'>
+			<div>
+				<div class='chapterTitle'><sup>1</sup>Preface</div>
+			</div>
+		</a>
+		<a href='#spaceTimeVolkmar' class='col' data-menuanchor='spaceTimeVolkmar'>
+			<div >
+				<div class='chapterTitle'>Space, Time & Volkmar<sup>2</sup></div>
+			</div>
+		</a>
+		<a href='#designerModeler' class='col' data-menuanchor='designerModeler'>
+			<div>
+				<div class='chapterTitle'><sup>3</sup>Designer vs. Modeler</div>
+			</div>
+		</a>
+		<a href='#rapidPrototyping' class='col' data-menuanchor='rapidPrototyping'>
+			<div>
+				<div class='chapterTitle'>Rapid Prototyping<sup>4</sup></div>
+			</div>
+		</a>
+		<a href='#clayModeling' class='col' data-menuanchor='clayModeling'>
+			<div>
+				<div class='chapterTitle'><sup>5</sup>Clay Modeling</div>
+			</div>
+		</a>
+		<a href='#modelingTools' class='col' data-menuanchor='modelingTools'>
+			<div>
+				<div class='chapterTitle'>Modeling Tools<sup>6</sup></div>
+			</div>
+		</a>
+		<a href='#plaster' class='col' data-menuanchor='plaster'>
+			<div>
+				<div class='chapterTitle'><sup>7</sup>Plaster</div>
+			</div>
+		</a>
+		<a href='#compareContrast' class='col' data-menuanchor='compareContrast'>
+			<div>
+				<div class='chapterTitle'>Compare & Contrast<sup>8</sup></div>
+			</div>
+		</a>
+		<a href='#meditativeExperience' class='col' data-menuanchor='meditativeExperience'>
+			<div>
+				<div class='chapterTitle'><sup>9</sup>Meditative Experience</div>
+			</div>
+		</a>
+		<a href='#faq' class='col' data-menuanchor='faq'>
+			<div>
+				<div class='chapterTitle'>FAQ<sup>10</sup></div>
+			</div>
+		</a>
+	</nav>
 	<div class='content'>
 		<div id='fullpage'>
-			<div class="slide" data-anchor="spaceTimeVolkmar"> Slide 1 </div>
-			<div class="slide" data-anchor="freeform"> Slide 2 </div>
-			<div class="slide" data-anchor="clay"> Slide 3 </div>
-			<div class="slide" data-anchor="plaster"> Slide 4 </div>
-			<div class="slide" data-anchor="meditation"> Slide 4 </div>
+			<div class="section" id='coverPage' data-anchor="preface">
+				<div id='coverText'> 
+					This website presents the 
+						<a href='#intro'>Freeform Modeling Workshop</a>,
+					lead by
+						<a href='#spaceTimeVolkmar'>Volkmar Meyer Schönbohm</a> at the HfG Schwäbisch Gmünd. 
+					The workshop includes materials and 
+						<a href='#modelingTools'>tools</a> for manipulating
+						<a href='#clayModeling'>clay</a> and 
+						<a href='#plaster'>gypsum plaster</a>. 
+					We conclude with a reflection on how freeform modelling can be a 
+						<a href='#meditation'>meditative and transformative </a>
+					experience.
+				</div>
+			</div>
+			<div class="section" data-anchor="spaceTimeVolkmar">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Space, Time & Volkmar
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="designerModeler">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Designer vs. Modeler
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="rapidPrototyping">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Rapid Prototyping
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="clayModeling">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Clay Modeling
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="clayModeling2">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Clay Modeling (2)
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="modelingTools">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Modeling Tools
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="plaster">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Plaster
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="compareContrast">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Compare & Contrast
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="meditativeExperience">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Meditative Experience
+					</div>
+				</div>
+			</div>
+			<div class="section" data-anchor="faq">
+				<div class='pageContainer'>
+					<div class='pageHeader'>
+						Frequently Asked Questions
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
