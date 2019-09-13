@@ -1,26 +1,49 @@
+/*-----Fonts-----*/
+
 @font-face {
   font-family: "GT Sectra Display Bold";
-  src: url("/fonts/GT-Sectra-Display-Bold.woff") format("woff");
+  src: url("../fonts/GT-Sectra-Display-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "GT Sectra Display Regular";
-  src: url("/fonts/GT-Sectra-Display-Regular.woff") format("woff");
+  src: url("../fonts/GT-Sectra-Display-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "GT Sectra Fine Book";
-  src: url("/fonts/GT-Sectra-Fine-Book.woff") format("woff");
+  src: url("../fonts/GT-Sectra-Fine-Book.woff") format("woff");
 }
+
+@font-face {
+   font-family: 'Palatino';
+   src: url('../fonts/PalatinoLinotype-Roman.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Palatino';
+   src: url('../fonts/PalatinoLinotype-Bold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Palatino';
+   src: url('../fonts/PalatinoLinotype-Italic.woff') format('woff');
+   font-weight: normal;
+   font-style: italic;
+}
+
+/*-----General-----*/
 
 html, body {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-}
-
-.noscrol {
-	overflow: hidden;
+	font-family: 'Palatino', sans-serif;
+	color: #1f1a41;
 }
 
 a {
@@ -28,12 +51,11 @@ a {
 	color: inherit;
 }
 
-body {
-	background-image: url("../img/background.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+img {
+	width: 100%;
 }
+
+/*-----General Content Page Formatting-----*/
 
 .content {
 	height: 100vh;
@@ -42,12 +64,31 @@ body {
 	float: right;
 }
 
+.pageContainer {
+	padding: 10px;
+	padding-left: 30px;
+	width: 100%;
+	height: 100%;
+}
+
+.pageHeader {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	font-family: 'GT Sectra Display Regular', serif;
+	font-size: 1em;
+    color: #1f1a41;
+    min-width: 100%;
+    flex-grow: 1;
+}
+
 .section {
-	z-index: 0;
-	padding-left: 100px;
+	padding: 0 100px;
 	font-size: 3em;
 	background-color: white;
+	z-index: 1;
 }
+
+/*-----Navigation Menu-----*/
 
 nav {
 	background-color: #f5e6d3;
@@ -67,7 +108,7 @@ nav.collapsed {
 	transform: translateX(-100vw);
 }
 
-.col {
+.navCol {
 	writing-mode: vertical-lr;
     transform: rotate(-180deg);
     height: 100%;
@@ -79,16 +120,6 @@ sup {
 	font-family: 'GT Sectra Fine Book', serif;
 	font-size: 0.5em;
 	margin: 20px 0;
-}
-
-.chapterTitle {
-	font-family: 'GT Sectra Display Regular', serif;
-	font-size: 4em;
-	color: #1f1a41;
-}
-
-.chapterTitle:hover {
-	color: #be9986;
 }
 
 svg {
@@ -103,6 +134,16 @@ svg {
 svg.flip {
 	transform-origin: center center;
 	transform: rotate(0deg);
+}
+
+.chapterTitle {
+	font-family: 'GT Sectra Display Regular', serif;
+	font-size: 4em;
+	color: #1f1a41;
+}
+
+.chapterTitle:hover {
+	color: #be9986;
 }
 
 #controlBar {
@@ -123,8 +164,101 @@ svg.flip {
 	height: 60px;
 }
 
-#coverPage {
-	background-color: transparent;
+/*-----Column-Grid System-----*/
+
+.flexBody {
+	display: flex;
+	flex-direction: row;
+}
+
+.flexBodyRight {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.column {
+	max-height: calc(100vh - 200px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-right: 30px;
+}
+
+.quoteCol {
+	max-width: 300px;
+}
+
+.imgCol, .listCol {
+	max-width: 400px;
+}
+
+.wideImgCol {
+	max-width: 600px;
+}
+
+.textCol {
+	max-width: 500px;
+}
+
+.textColSmall {
+	max-width: 300px;
+}
+
+.bodyText {
+	font-size: 0.4em;
+	line-height: 1.5em;
+}
+
+/*-----Spacing and Lists----*/
+
+.lineBreak {
+	margin-bottom: 15px;
+}
+
+ol > li {
+	padding-bottom: 20px;
+}
+
+strong {
+	margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    margin-block-start: 0.5em;
+    padding-left: 0;
+}
+
+ul > li:before {
+    display: inline-block;
+    content: "–";
+    width: 1.3em;
+    margin-left: -1.3em;
+}
+
+/*-----Styling----*/
+
+.whiteHeader {
+	color: white;
+}
+
+.offWhite {
+	background-color: #f5e6d3;
+}
+
+.gray {
+	background-color: #d2cdbe;
+}
+
+/*-----Cover Page-----*/
+
+#coverPageSection {
+	background-image: url("../img/background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	display: flex;
 	justify-content: center;
     flex-direction: column;
@@ -132,17 +266,13 @@ svg.flip {
 
 #coverText {
 	color: white;
-	font-size: 0.65em;
-    font-family: 'Palatino';
-    font-weight: 200;
+	font-size: 0.5em;
     max-width: 47%;
-    line-height: 1.25em;
-
+    line-height: 1.4em;
 }
 
 #coverText > a {
 	text-decoration: none;
-	font-family: 'Palatino';
 	color: white;
 	font-style: italic;
 }
@@ -151,22 +281,187 @@ svg.flip {
 	color: #be9986;
 }
 
-.pageContainer {
-	padding: 10px;
-	padding-left: 30px;
-	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-columns: auto auto auto;
-  	grid-gap: 10px;
+/*-----Space, Time, Volkmar-----*/
+
+#map {
+	height: auto;
+    width: 300px;
+    margin-bottom: 40px;
 }
 
-.pageHeader {
-	padding-top: 100px;
+table {
+	font-size: 0.4em;
+	align-self: flex-start;
+	margin-top: 50px;
+	border-collapse: collapse; 
+}
+
+table > caption {
+	font-weight: bold;
+	text-align: left;
+}
+
+tr > td {
+	padding: 0;
+	padding-right: 30px;
+}
+
+tr.rowSep > td {
+	padding-top: 10px;
+}
+
+td.smallCaps {
+	font-variant: all-small-caps;
+}
+
+td.oldStyle {
+	font-variant-numeric: oldstyle-nums;
+}
+
+td.tblRemark {
+	font-style: italic;
+	font-size: 80%;
+}
+
+.caption {
+	font-style: italic;
+	font-size: 0.3em;
+	color: #1f1a41;
+	padding: 0 10px;
+	text-align: center;
+}
+
+/*-----Clay Modelling-----*/
+/*--Cover--*/
+
+#clayModelingSection {
+	background-image: url("../img/clayModeling.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+#clayHeader, #clayBody {
+	padding-left: 45vw;
+}
+
+/*--Videos--*/
+
+.videoContainer {
+	display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.videoCol {
+	height: 100%;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.rotoVid {
+	width: 300px;
+	height: 300px;
+	border-radius: 2%;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.rotoVid:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#clayQuote {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+}
+
+blockquote {
+	margin: 0;
+    font-size: 0.6em;
+    font-style: italic;
+    position: relative;
+	text-align: center;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #1f1a41;
+	font-size: 1.5em;
+	font-style: normal;
+}
+
+blockquote:before {
+	content: '“';
+	right: 15.5rem;
+    top: -1rem;
+}
+
+blockquote:after {
+	content: '”';
+    bottom: -2.3rem;
+    left: 16rem;
+}
+
+/*-----Gypsum Modeling-----*/
+
+#gypsumModelingSection {
+	background-image: url("../img/gypsumModel.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*-----The Meditative Experience-----*/
+/*--Cover--*/
+#meditativeExperienceSection {
+	background-image: url("../img/meditative.png");
+	background-position-x: right;
+	background-repeat: no-repeat;
+}
+
+#meditativeHeader {
 	font-family: 'GT Sectra Display Regular', serif;
-	font-size: 1em;
+    font-size: 1em;
     color: #1f1a41;
-    height: 80px;
-	grid-column-start: 1;
-  	grid-column-end: 4;
+    width: 100px;
+    position: absolute;
+    bottom: 20vh;
+    left: 30vw;
+}
+
+/*--Content--*/
+#meditativeExperienceSection2 {
+	background-image: url("../img/meditativeTexture.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+em.fancyBold {
+	font-family: 'GT Sectra Fine Regular', serif;
+	font-size: 0.7em;
+	font-style: normal;
+	padding-bottom: 15px;
+}
+
+/*-----Final Window-----*/
+#windowCloseSection {
+	background-image: url("../img/window.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+} 
+
+.closeBox {
+	width: 300px;
+	position: absolute;
+	left: 20vw;
+	bottom: 17vh;
 }
