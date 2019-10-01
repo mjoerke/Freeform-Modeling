@@ -5,7 +5,7 @@ new fullpage('#fullpage', {
 			 'clayModeling', 'clayModeling2', 'clayModeling3', 
 			 'modelingTools', 'gypsumModeling', 'gypsum2', 
 			 'meditativeExperience', 'meditativeExperience2', 'windowClose'],
-
+	licenseKey: 'OF^gTKS$l5',
 	menu: "#navbar",
 	scrollingSpeed: 2000,
 	verticalCentered: false,
