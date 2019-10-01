@@ -2,71 +2,71 @@
 <html>
 <head>
 	<title>Freeform Modeling Workshop</title>
-	<link rel="stylesheet" type="text/css" href="css/fullpage.css"/>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	<script
-  		src="https://code.jquery.com/jquery-3.4.1.min.js"
-  		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  		crossorigin="anonymous"></script>
-  	<script type="text/javascript" src="js/fullpage.js"></script>
+	<!-- fullpage.js -->
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css"/>
+	<script type="text/javascript" src="js/fullpage.js"></script>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<meta charset='utf-8'>
 </head>
 <body>
-	<!-- <div id='coverText'> Freeform Modeling Workshop</div> -->
 	<div id='controlBar'>
-		<svg id='navButton' class='flip' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 22.7 22.7" style="enable-background:new 0 0 22.7 22.7;" xml:space="preserve">
-		<g>
-			<polygon class="st0" points="6.5,22.6 4.9,21.1 14.7,11.3 4.9,1.6 6.5,0.1 17.7,11.3 	"/>
-		</g>
+		<svg id='navOpenButton' class='flip' version="1.1" id="Layer_1" 
+			xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+			viewBox="0 0 22.7 22.7" style="enable-background:new 0 0 22.7 22.7;" xml:space="preserve">
+			<g>
+				<polygon class="st0" points="6.5,22.6 4.9,21.1 14.7,11.3 4.9,1.6 6.5,0.1 17.7,11.3 	"/>
+			</g>
 		</svg>
 	</div>
 	<nav id='navbar' class='collapsed'>
-		<a href='#preface' class='col' data-menuanchor='preface'>
+		<a href='#coverPage' class='navCol' data-menuanchor='coverPage'>
 			<div>
 				<div class='chapterTitle'><sup>1</sup>Preface</div>
 			</div>
 		</a>
-		<a href='#spaceTimeVolkmar' class='col' data-menuanchor='spaceTimeVolkmar'>
+		<a href='#spaceTimeVolkmar' class='navCol' data-menuanchor='spaceTimeVolkmar'>
 			<div >
 				<div class='chapterTitle'>Space, Time & Volkmar<sup>2</sup></div>
 			</div>
 		</a>
-		<a href='#designerModeler' class='col' data-menuanchor='designerModeler'>
+		<a href='#designerModeler' class='navCol' data-menuanchor='designerModeler'>
 			<div>
 				<div class='chapterTitle'><sup>3</sup>Designer vs. Modeler</div>
 			</div>
 		</a>
-		<a href='#rapidPrototyping' class='col' data-menuanchor='rapidPrototyping'>
+		<a href='#rapidPrototyping' class='navCol dead' data-menuanchor='rapidPrototyping'>
 			<div>
 				<div class='chapterTitle'>Rapid Prototyping<sup>4</sup></div>
 			</div>
 		</a>
-		<a href='#clayModeling' class='col' data-menuanchor='clayModeling'>
+		<a href='#clayModeling' class='navCol' data-menuanchor='clayModeling'>
 			<div>
 				<div class='chapterTitle'><sup>5</sup>Clay Modeling</div>
 			</div>
 		</a>
-		<a href='#modelingTools' class='col' data-menuanchor='modelingTools'>
+		<a href='#modelingTools' class='navCol' data-menuanchor='modelingTools'>
 			<div>
 				<div class='chapterTitle'>Modeling Tools<sup>6</sup></div>
 			</div>
 		</a>
-		<a href='#plaster' class='col' data-menuanchor='plaster'>
+		<a href='#gypsumModeling' class='navCol' data-menuanchor='gypsumModeling'>
 			<div>
-				<div class='chapterTitle'><sup>7</sup>Plaster</div>
+				<div class='chapterTitle'><sup>7</sup>Gypsum Modeling</div>
 			</div>
 		</a>
-		<a href='#compareContrast' class='col' data-menuanchor='compareContrast'>
+		<a href='#compareContrast' class='navCol dead' data-menuanchor='compareContrast'>
 			<div>
 				<div class='chapterTitle'>Compare & Contrast<sup>8</sup></div>
 			</div>
 		</a>
-		<a href='#meditativeExperience' class='col' data-menuanchor='meditativeExperience'>
+		<a href='#meditativeExperience' class='navCol' data-menuanchor='meditativeExperience'>
 			<div>
 				<div class='chapterTitle'><sup>9</sup>Meditative Experience</div>
 			</div>
 		</a>
-		<a href='#faq' class='col' data-menuanchor='faq'>
+		<a href='' class='navCol dead' data-menuanchor='faq'>
 			<div>
 				<div class='chapterTitle'>FAQ<sup>10</sup></div>
 			</div>
@@ -74,25 +74,71 @@
 	</nav>
 	<div class='content'>
 		<div id='fullpage'>
-			<div class="section" id='coverPage' data-anchor="preface">
+			<div class="section" id='coverPageSection' data-anchor="coverPage">
 				<div id='coverText'> 
-					This website presents the 
-						<a href='#intro'>Freeform Modeling Workshop</a>,
-					lead by
-						<a href='#spaceTimeVolkmar'>Volkmar Meyer Schönbohm</a> at the HfG Schwäbisch Gmünd. 
-					The workshop includes materials and 
-						<a href='#modelingTools'>tools</a> for manipulating
-						<a href='#clayModeling'>clay</a> and 
-						<a href='#plaster'>gypsum plaster</a>. 
-					We conclude with a reflection on how freeform modelling can be a 
-						<a href='#meditation'>meditative and transformative </a>
-					experience.
+					The 
+						<a href='#intro'>Freeform Modeling Workshop</a>
+					at the 
+						<a href='https://hfg-gmuend.de'>HfG Schwäbisch Gmünd</a>
+					offers 
+						<a href='#modelingTools'>tools and materials</a> for 
+						<a href='#clayModeling'>clay</a>
+					and 
+						<a href='#gypsumModeling'>gypsum</a>
+					modeling. 
+						<a href='#spaceTimeVolkmar'>Volkmar Meyer-Schönbohm</a>
+					leads the workshop, teaching courses and providing assistance for student projects. Freeform modeling is a popular technique for 
+						<a href='#designerModeler'>designers and modelers alike</a> for prototyping
+					3D models, allowing for greater flexibility compared to computer-aided techniques. In fact, many students report the tactile experience of modeling by hand to be 
+					<a href='#meditation'>meditative and relaxing</a>, a sentiment proudly echoed by Volkmar himself. 
 				</div>
 			</div>
-			<div class="section" data-anchor="spaceTimeVolkmar">
+			<div class="section" data-anchor="spaceTimeVolkmar" id='spaceTimeVolkmarSection'>
 				<div class='pageContainer'>
 					<div class='pageHeader'>
-						Space, Time & Volkmar
+						Space, Time, and Volkmar
+					</div>
+					<div class='flexBody'>
+						<div class='column imgCol'>
+							<img src='img/map.png' id='map'>
+							<div class='caption'>
+							The workshop is located in the basement of the HfG main building. Just take the stairs down from the cafeteria and turn right. 
+							</div>
+						</div>
+						<div class='column textCol'>
+							<div class='bodyText'>
+								Despite the rise of digital tools and rapid prototyping, it has never been more important for designers to make things with their hands. Comfort with three dimensions as a sketch and development tool enhances a designer’s sensitivity to form tremendously, and helps them understand how products are made in the real world. If you can build it, you’re halfway to knowing how it could be manufactured.
+							</div>
+							<table>
+								<caption>Opening Hours</caption>
+								<tr class="rowSep">
+									<td class='smallCaps'>Mon – Wed</td>
+									<td class='oldStyle'>09:00 – 12:00</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class='oldStyle'>13:00 – 15:30</td>
+								</tr>
+								<tr class="rowSep">
+									<td class='smallCaps'>Thu</td>
+									<td class='oldStyle'>9:00 – 16:00</td>
+								</tr>
+								<tr>
+									<td class='smallCaps'></td><td class='tblRemark'>(only clay workshop)</td>
+								</tr>
+								<tr class="rowSep">
+									<td class='smallCaps'>Fri</td><td>closed</td>
+								</tr>
+							</table>						
+						</div>
+						<div class='column imgCol'>
+							<div id='volkmar'>
+								<img src='img/volkmar.jpg' style='opacity: 0.8'>
+								<div class='caption'>
+									Volkmar Meyer-Schönbohm, Head of the Workshop
+								</div>
+							</div>	
+						</div>
 					</div>
 				</div>
 			</div>
@@ -101,67 +147,238 @@
 					<div class='pageHeader'>
 						Designer vs. Modeler
 					</div>
-				</div>
-			</div>
-			<div class="section" data-anchor="rapidPrototyping">
-				<div class='pageContainer'>
-					<div class='pageHeader'>
-						Rapid Prototyping
+					<div class='flexBody'>
+						<div class='column textCol'>
+							<div class='bodyText'>
+								The most important stage in the process of completing a design model is occupied by creative activity and the joint work of the modeler and the designer. There are various combinations of the two-a new designer and an experienced modeler, a veteran designer and a veteran modeler-so it is difficult to define their respective scopes of responsibility or their relationship. Figuratively speaking, it is similar to that between a composer and an instrumental ist. A composer creates a piece of music that reflects his/her image. The instrumentalist transforms the image on the musical score into a sound that reflects his/her sensitivity and skill. The modeler also expresses the designer’s image-but in cubic form and with maximum skill and sensitivity. The information on which model ing is carried out is based on the designer’s ability to convey an sketches, renderings, key-line drawings, and language.
+							</div>
+						</div>
+						<div class='column textCol'>
+							<div class='bodyText'>
+								A modeler’s creative work can be roughly broken down into the following three phases:
+								<ol>
+									<li><em>Giving the design a framework: </em>
+										The designer’s image is transformed into a solid form that observes the specified proportions and primary dimensions.
+									</li>
+									<li><em>Elaborating on surfaces and lines: </em>
+										Further pursuing the designer’s image, overall proportions and a massive, dynamic impression are represented th rough well-handled surface and lines. A shape that is close to the designer’s image or even superior to it is sought.
+									</li>
+									<li>
+										<em>Final refinement: </em>
+										Finally, the car’s 'flavor' is reviewed, including all the details. So me additions may be made to bring the model closer to perfection. For such creative work to be done more smoothly and the results to be better reflected in the product.
+									</li>
+								</ol>
+							</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="section" data-anchor="clayModeling">
+			<div class="section" data-anchor="clayModeling" id='clayModelingSection'>
 				<div class='pageContainer'>
-					<div class='pageHeader'>
+					<div class='pageHeader whiteHeader' id='clayHeader'>
 						Clay Modeling
 					</div>
-				</div>
-			</div>
-			<div class="section" data-anchor="clayModeling2">
-				<div class='pageContainer'>
-					<div class='pageHeader'>
-						Clay Modeling (2)
+					<div class='flexBody' id='clayBody'>
+						<div class='column textCol'>
+							<div class='bodyText'>
+								Industrial Clay is an extremely versatile tool, with many wide-ranging uses for the medium. Model-making has been a tool for designers for thousands of years. You try something out, tweak it, scrap it, and try again. It turns the imagined into the real, and lets the idea speak for itself.
+
+								<div class='lineBreak'></div>
+								Computers haven’t changed this. No desktop simulation, VR goggles, or even lush artistic rendering can change the value of having an actual artifact in front of you to look at and touch. It comes as no surprise that physical modeling still thrives in design studios around the world—particularly in the automotive industry. It’s the primary tool that designers use to craft their vision, and by far the easiest way for production teams and execs to fully grasp and evaluate the work, both aesthetically and practically.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="section" data-anchor="modelingTools">
+			<div class="section offWhite" data-anchor="clayModeling2">
 				<div class='pageContainer'>
-					<div class='pageHeader'>
-						Modeling Tools
+					<div class='videoContainer'>
+						<div class='videoCol'>
+							<video class="rotoVid" onmouseover="play(this)" onmouseout='this.pause()' >
+								<source src="vid/roto1.mp4" type="video/mp4">
+							</video>
+							<video class="rotoVid" onmouseover="play(this)" onmouseout='this.pause()' >
+								<source src="vid/roto2.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class='videoCol'>
+							<div id='clayQuote'>
+								<blockquote>
+									It enables us to intuitively create a form that appeals to people's hearts and mind.
+								</blockquote>
+							</div>
+							<video class="rotoVid" onmouseover="play(this)" onmouseout='this.pause()'>
+								<source src="vid/roto3.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class='videoCol'>
+							<video class="rotoVid" onmouseover="play(this)" onmouseout='this.pause()' loop preload="auto">
+								<source src="vid/roto4.mp4" type="video/mp4">
+							</video>
+							<video class="rotoVid" onmouseover="play(this)" onmouseout='this.pause()' loop preload="auto">
+								<source src="vid/roto5.mp4" type="video/mp4">
+							</video>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="section" data-anchor="plaster">
+			<div class="section offWhite" data-anchor="clayModeling3">
 				<div class='pageContainer'>
 					<div class='pageHeader'>
-						Plaster
+						Advantages and Disadvantages of Clay
+					</div>
+					<div class='flexBody'>
+						
+						<div class='column listCol'>
+							<div class='bodyText'>
+								<strong>Advantages</strong>
+								<ul>
+									<li>Easily moldable at 50-60°C</li>
+									<li>Reusable (arbitrarily many times)</li>
+									<li>Stable (hard) model at 22°C</li>
+									<li>Model can be modified at any time to any shape by reheating</li>
+									<li>Clay attaches to wood or styrofoam without any glue or adhesive</li>
+									<li>Models can be coated with special paints</li>
+									<li>Can be used as a negative mould for plaster, polyester, or silicone</li>
+								</ul>
+							</div>	
+						</div>
+						
+						<div class='column listCol'>
+							<div class='bodyText' style='padding-left: 25px;'>
+								<strong>Disdvantages</strong>
+								<ul>
+									<li>Weak edge stability</li>
+									<li>Cannot be used for deep draw moulding</li>
+									<li>Stable coating is difficult, since clay can expand/contract with temperature</li>
+								</ul>
+							</div>	
+						</div>
+						<div class='column imgCol'>
+							<img src='img/clayCompare.jpg'>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="section" data-anchor="compareContrast">
+			<div class="section offWhite" data-anchor="modelingTools" id='modelingToolsSection'>
 				<div class='pageContainer'>
 					<div class='pageHeader'>
-						Compare & Contrast
+							Modeling Tools
+						</div>
+					<div class='flexBody'>
+						<div class='column wideImgCol'>
+							<img src='img/modelingTools.jpg'>
+						</div>
+						<div class='textCol'>
+							<div class='bodyText'>
+								The main purpose of a rake is to remove material in an efficient manner, giving you a clay form that is representative of the design required, even if it is a very rough representation. By achieving the basic form very early in the modeling process, the designer has time to consider changes that will enhance the overall look thus leading to an appealing design.
+								<div class='lineBreak'></div>
+								Rakes come in various forms: from large flat rakes which are used primarily on convex surfaces to curved rakes which are used on concaved surfaces. They usually range in size from 2"or 50mm to 6" or 150mm in width but can be of any size if custom made. The blade is normally double sided which gives you the opportunity to file teeth into the opposite edge. The reason for this is to reduce the amount of resistance when shaping the clay surface.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="section" data-anchor="meditativeExperience">
+			<div class="section" data-anchor="gypsumModeling" id='gypsumModelingSection'>
+				<div class='pageContainer'>
+					<div class='flexBodyRight'>
+						<div class='column textCol'>
+							<div class='pageHeader' id='gypsumHeader'>
+								Gypsum Modeling
+							</div>
+							<div class='bodyText' id='gypsumText'>
+								Gypsum is a raw material used for all things ceramic. Gypsum is naturally occurring mineral (calcium sulfate dihydrate), which is quarried and ground to a fine powder. Gypsum plaster is produced by heating raw powdered gypsum to 120-130°C. When mixed with water, gypsum plaster begins to recrystallize andcan be used as a modelling material. After the water fully evaporates, the resulting model is sturdy and partic- ularly absorbent. Oftentimes, plaster with particular properties is desired, such as especially sturdy plaster for compression molding or especially porous plaster for casting. The mate- rial properties of gypsum plaster can be manipulating by varying the ratio of gypsum powder to water.
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="section gray" data-anchor="gypsum2" id='gypsumCompareSection'>
 				<div class='pageContainer'>
 					<div class='pageHeader'>
-						Meditative Experience
+						Advantages and Disadvantages of Gypsum
+					</div>
+					<div class='flexBody'>
+						<div class='column listCol'>
+							<div class='bodyText''>
+								<strong>Advantages</strong>
+								<ul>
+									<li>Excellent surface finish and good dimensional accuracy</li>
+									<li>Minimum possible cross-section is 0.6mm (0.024in)</li>
+									<li>Near net shape casting, which can be a cost advantage on complex parts</li>
+									<li>No shrinkage cracks</li>
+									<li>Quick setting time</li>
+									<li>Models can be coated with special paints</li>
+									<li>Can be used as a mould for plaster, polyester, or silicone</li>
+								</ul>
+							</div>	
+						</div>
+						
+						<div class='column listCol'>
+							<div class='bodyText' style='padding-left: 25px;'>
+								<strong>Disdvantages</strong>
+								<ul>
+									<li>Cannot be used in moist situations.</li>
+									<li>Cannot be used for models with thin shapes models are heavy and brittle</li>
+									<li>Breakage in models are permanant</li>
+								</ul>
+							</div>	
+						</div>
+
+						<div class='column imgCol'>
+							<img src='img/gypsumCompare.jpg' id='gypsumCompare'>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="section" data-anchor="faq">
+			<div class="section offWhite" id='meditativeExperienceSection' data-anchor="meditativeExperience">
 				<div class='pageContainer'>
-					<div class='pageHeader'>
-						Frequently Asked Questions
+					<div id='meditativeHeader'>
+						The Meditative Experience
+					</div>
+				</div>
+			</div>
+			<div class="section offWhite" data-anchor="meditativeExperience2" id='meditativeExperienceSection2'>
+				<div class='pageContainer' style="padding-top: 100px">
+					<div class='flexBody'>
+						<div class='column textColSmall'>
+							<em class='fancyBold'>Self-Expression and Self-Discovery</em>
+							<div class='bodyText'>
+								In an intensive therapeutic environment, you are continuously invited to give verbal expression to your thoughts, feelings, perceptions, and experiences. However, words are not the right medium for all forms of expression–there are thoughts we have that are too complex or overwhelming for words to hold. Freeform modelling provides a new, rich language to give voice to your inner self through sculptural form, allowing you to discover new avenues of communication and introspection of the mind.
+							</div>
+						</div>
+						<div class='column textColSmall'>
+							<em class='fancyBold'>Stress Relief and Relaxation</em>
+							<div class='bodyText'>
+								The tactile experience of clay and plaster can invite a deep sense of relaxation and well- being. As your mind and body become enveloped in the world of creativit, your heart rate and blood pressure lower and your stress level naturally sinks. The clay disrupts intrusive thoughts that interfere with your ability to live in and enjoy the moment. By allowing you to step outside of yourself and devote your energies to the production of something new, pottery can provide a much needed emotional reprieve and new perspectives.
+							</div>
+						</div>
+						<div class='column textColSmall'>
+							<em class='fancyBold'>Mastery and Self-Confidence</em>
+							<div class='bodyText'>
+								Freeform modelling allows you to discover previously unrealized strengths as you gain mastery over the creative process, developing both technical skill and expressive abilities. The sense of mastery you gain as you develop your personal artistic style can be a source of invigoration, enhancing your confidence and sense of purpose at an emotionally vulnerable time in your life. In freeform modelling, there is no competition, no right way or wrong way, but only there are infinite possibilities for creating pieces that speak to you.
+							</div>
+						</div>		
+					</div> 
+				</div>
+			</div>
+			<div class='section' data-anchor='windowClose' id='windowCloseSection'>
+				<div class='closeBox'>
+					<div class='bodyText'>
+						Urmi Banerjee<br>
+						Matthew Jörke<br>
+						Athang Samanth<br>
+						<div class='lineBreak'></div>
+						<em>HfG Schwäbisch Gmünd</em></br>
+						<em>Typography/Image/Layout</em>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
